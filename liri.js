@@ -95,32 +95,18 @@ function movieThis() {
     console.log(output)
   })
 };
-  function doWhatItSays() {
+function doWhatItSays() {
 
-    fs.readFile("./random.txt", "utf8", function (error, data) {
+  fs.readFile("./random.txt", "utf8", function (error, data) {
 
-      var commandString = data.split(",");
-      var command = commandString[0].trim;
-      var param = commandString[1].trim;
+    var commandString = data.split(",");
+    var command = commandString[0].trim;
+    var param = commandString[1].trim;
 
-      //console.log(command + param);
-
-      switch (command) {
-        case "my-tweets":
-          myTweets();
-          break;
-
-        case "spotify-this-song":
-          spotifySong(param);
-          break;
-
-        case "movie-this":
-          movieThis(param);
-          break;
-      }
-
-    })
+    //console.log(command + param);
   }
+  )
+}
 
   if (command === "my-tweets") {
     myTweets();
